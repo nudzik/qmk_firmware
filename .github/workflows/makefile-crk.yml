@@ -12,19 +12,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
 
-#    - name: configure
-#      run: ./configure
+      - uses: actions/checkout@v3
 
-#    - name: Install dependencies
-#      run: make
+      - name: Build Firmware
+        uses: ./
+        with:
+          keymap-path: "keyboards/crkbd/keymaps/via"
+          keyboard: "crkbd/rev1"
+          keymap: "via"
 
-#    - name: Run check
-#      run: make check
-
-#    - name: Run distcheck
-#      run: make distcheck
-      
-    - name: build crkbd keyboard
-      run: make crkbd:via
+      - name: Upload a Firmware
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          name: firmware
+          path: build
