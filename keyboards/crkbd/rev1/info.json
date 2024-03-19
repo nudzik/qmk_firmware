@@ -76,8 +76,7 @@
             {"matrix": [6, 0], "x": 224, "y": 41, "flags": 1}
         ]
     },
-    "processor": "RP2040",
-    "bootloader": "rp2040",
+    "development_board": "promicro",
     "layout_aliases": {
         "LAYOUT": "LAYOUT_split_3x6_3"
     },
