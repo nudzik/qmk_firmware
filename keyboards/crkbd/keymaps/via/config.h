@@ -42,3 +42,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #endif
 
 #define OLED_FONT_H "keyboards/crkbd/lib/glcdfont.c"
+#define SPLIT_CONNECTION_CHECK_TIMEOUT 500
+
+
+#define WS2812_PIO_USE_PIO1
+
+#undef I2C_DRIVER
+#define I2C_DRIVER I2CD0
+#undef I2C1_SCL_PIN
+#define I2C1_SCL_PIN GP25
+#undef I2C1_SDA_PIN
+#define I2C1_SDA_PIN GP24

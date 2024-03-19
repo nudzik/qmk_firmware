@@ -53,3 +53,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP13
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 500U
 
+
+#define WS2812_PIO_USE_PIO1
+
+#undef I2C_DRIVER
+#define I2C_DRIVER I2CD0
+#undef I2C1_SCL_PIN
+#define I2C1_SCL_PIN GP25
+#undef I2C1_SDA_PIN
+#define I2C1_SDA_PIN GP24
